@@ -11,26 +11,32 @@ Follow these steps to add a new project to PUT_TSD:
     git clone github.com/kooogi/PUT_TSD
     ```
 
-2. **Create a new folder for your project**: Navigate into the cloned repository and create a new folder for your project. Run these commands:
+2. **Create a new folder**: Navigate into the cloned repository and create a new folder for the repository you want to add. Run these commands:
     ```bash
     cd PUT_TSD
-    mkdir new_project_folder  # folder for your new project
+    mkdir new_folder  # folder for the repository you want to add
     ```
 
-3. **Clone your project repository**: Go back to your terminal and clone your project repository into the newly created folder within PUT_TSD. Run these commands:
+3. **Go back and clone the repository you want to move**: Navigate back and clone the repository you wish to move into PUT_TSD. Run these commands:
     ```bash
     cd ..
-    git clone github.com/your_username/your_project_repo new_project_folder
+    git clone github.com/kooogi/repo_u_want_to_move
     ```
 
-4. **Commit changes**: Commit the changes made to PUT_TSD. Run these commands:
+4. **Move files from the cloned repository to the created folder**: Go into the cloned repository and move its files to the previously created folder in PUT_TSD. Run these commands:
     ```bash
-    cd PUT_TSD
-    git add .
-    git commit -m "Add [your_project_name] to PUT_TSD"
+    cd repo_u_want_to_move
+    mv * ../PUT_TSD/new_folder
     ```
 
-5. **Push changes to GitHub (optional)**: If you wish to push the changes to GitHub, run:
+5. **Commit changes**: Commit the changes made to PUT_TSD. Run these commands:
+    ```bash
+    cd ../PUT_TSD
+    git add .
+    git commit -m "Add [repository_name] to PUT_TSD"
+    ```
+
+6. **Push changes to GitHub (optional)**: If you wish to push the changes to GitHub, run:
     ```bash
     git push origin master
     ```
